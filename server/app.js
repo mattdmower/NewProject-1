@@ -1,18 +1,15 @@
-// Importing 'uuid' to generate unique identifiers for lists and items.
 import express from 'express';
 import morgan from 'morgan';
 import ViteExpress from 'vite-express';
 import { v4 as uuidv4 } from 'uuid';
 
 const app = express();
-const port = 3000; // Changing the port to the common default for React apps
+const port = 3000;
 
-// Middleware
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
-// In-memory store for bucket lists
 let bucketLists = {};
 
 // Endpoint to get all bucket lists
@@ -75,7 +72,6 @@ app.delete('/api/bucketlists/:listId/items/:itemId', (req, res) => {
   }
 });
 
-// ViteExpress configuration to serve the React app
 ViteExpress.config({ printViteDevServerHost: true });
 
 ViteExpress.listen(app, port, () => console.log(`Server is listening on http://localhost:${port}`));

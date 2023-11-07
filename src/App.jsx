@@ -1,4 +1,3 @@
-// Importing necessary hooks and axios for API calls.
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
@@ -10,7 +9,7 @@ const App = () => {
   const [newListName, setNewListName] = useState('');
   const [error, setError] = useState('');
 
-  // Fetch all bucket lists on component mount
+  // Fetch all bucket lists
   useEffect(() => {
     axios.get(apiUrl)
       .then(response => setBucketLists(response.data))
