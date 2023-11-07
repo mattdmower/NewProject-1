@@ -62,11 +62,11 @@ const App = () => {
       <div>
         <input
           type="text"
-          placeholder="New bucket list name"
+          placeholder="Title"
           value={newListName}
           onChange={(e) => setNewListName(e.target.value)}
         />
-        <button onClick={createBucketList}>Create New Bucket List</button>
+        <button onClick={createBucketList}>+ New Category</button>
       </div>
 
       {/* Render each bucket list */}
@@ -99,17 +99,17 @@ const BucketList = ({ list, addItemToList, updateItemInList, deleteItemFromList 
       <div>
         <input
           type="text"
-          placeholder="Item name"
+          placeholder="Name"
           value={newItemName}
           onChange={(e) => setNewItemName(e.target.value)}
         />
         <input
           type="text"
-          placeholder="Item description"
+          placeholder="Notes"
           value={newItemDescription}
           onChange={(e) => setNewItemDescription(e.target.value)}
         />
-        <button onClick={handleAddItem}>Add Item</button>
+        <button onClick={handleAddItem}>+ New Item</button>
       </div>
 
       {/* Render items within this list */}
