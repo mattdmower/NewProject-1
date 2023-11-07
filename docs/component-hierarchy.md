@@ -1,6 +1,6 @@
 # Component Hierarchy for Bucket List Tracker
 
-This document describes the hierarchy and structure of the React components used in the Bucket List Tracker web application. Each component is designed with a specific responsibility in mind, following the principles of component-based architecture.
+This document describes the hierarchy and structure of the React components used in the Bucket List Tracker web application.
 
 ## High-Level Component Structure
 
@@ -89,7 +89,3 @@ The data flow is unidirectional, from the top-level `<App />` component down to 
 ## State Management
 
 State management is done via React's useState and useEffect hooks, without any external state management library.
-
----
-
-By organizing components in this hierarchical manner, we can ensure that each component is responsible for its own functionality, making the app easier to maintain and scale.

@@ -24,7 +24,7 @@ To set up the Bucket List Tracker locally, follow these steps:
 1. Clone the repository to your machine:
 
     ```bash
-    git clone https://github.com/yourusername/bucket-list-tracker.git
+    git clone https://github.com/mattdmower/NewProject-1
     ```
 
 2. Navigate to the cloned repository:
@@ -64,16 +64,6 @@ The application offers the following endpoints:
 - `POST /api/lists/:listId/items`: Add a new item to a list.
 - `PUT /api/lists/:listId/items/:itemId`: Update an existing item.
 - `DELETE /api/lists/:listId/items/:itemId`: Delete an item.
-
-## Contributing
-
-Contributions to improve the Bucket List Tracker are welcomed. Please follow these guidelines to contribute:
-
-1. Fork the project repository.
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`).
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`).
-4. Push to the branch (`git push origin feature/AmazingFeature`).
-5. Open a Pull Request.
 
 ## Contact
 
