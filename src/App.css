@@ -1,42 +1,105 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.App h1 {
+    margin-bottom: 20px;
+    /* Adjust the value as needed */
+    font-size: 2em;
+    /* Makes the h1 text bigger*/
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.App {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+h1,
+h2 {
+    color: #333;
 }
 
-.card {
-  padding: 2em;
+.error {
+    color: red;
 }
 
-.read-the-docs {
-  color: #888;
+.bucket-list,
+.bucket-list-item {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+}
+
+input[type="text"],
+input[type="checkbox"] {
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: calc(100% - 22px);
+}
+
+input[type="checkbox"] {
+    width: auto;
+}
+
+button {
+    background-color: #5cb85c;
+    /* Bootstrap 'success' color */
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+button:hover {
+    background-color: #4cae4c;
+    /* Darken the button a bit */
+}
+
+/* Styles for the 'Edit' and 'Delete' buttons to distinguish them */
+button:not(:first-of-type) {
+    background-color: #d9534f;
+    /* Bootstrap 'danger' color */
+}
+
+button:not(:first-of-type):hover {
+    background-color: #c9302c;
+    /* Darken the button a bit */
+}
+
+/* Specific styles for 'Save' and 'Cancel' buttons */
+.bucket-list-item button:nth-of-type(1),
+.bucket-list-item button:nth-of-type(2) {
+    background-color: #337ab7;
+    /* Bootstrap 'primary' color */
+}
+
+.bucket-list-item button:nth-of-type(1):hover,
+.bucket-list-item button:nth-of-type(2):hover {
+    background-color: #286090;
+    /* Darken the button a bit */
+}
+
+/* Style adjustments for 'Cancel' button */
+.bucket-list-item button:nth-of-type(2) {
+    background-color: #f0ad4e;
+    /* Bootstrap 'warning' color */
+}
+
+.bucket-list-item button:nth-of-type(2):hover {
+    background-color: #ec971f;
+    /* Darken the button a bit */
 }
