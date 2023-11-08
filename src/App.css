@@ -64,7 +64,6 @@ button:hover {
     background-color: #4cae4c;
 }
 
-
 button:not(:first-of-type) {
     background-color: #d9534f;
 }

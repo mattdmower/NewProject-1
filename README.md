@@ -69,7 +69,6 @@ The application offers the following endpoints:
 
 - Creator: Matthew Mower
 - Email: mattdmower@gmail.com
-- Project Repository: [https://github.com/yourusername/bucket-list-tracker](https://github.com/yourusername/bucket-list-tracker)
 
 ## Acknowledgements
 

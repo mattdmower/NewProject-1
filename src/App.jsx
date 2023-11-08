@@ -56,7 +56,6 @@ const App = () => {
     <div className="App">
       <h1>Bucket List Tracker</h1>
       {error && <p className="error">{error}</p>}
-
       { }
       <div>
         <input
@@ -67,7 +66,6 @@ const App = () => {
         />
         <button onClick={createBucketList}>+ New Category</button>
       </div>
-
       { }
       {bucketLists.map(list => (
         <BucketList
@@ -85,7 +83,6 @@ const App = () => {
 const BucketList = ({ list, addItemToList, updateItemInList, deleteItemFromList }) => {
   const [newItemName, setNewItemName] = useState('');
   const [newItemDescription, setNewItemDescription] = useState('');
-
   const handleAddItem = () => {
     addItemToList(list.id, newItemName, newItemDescription);
     setNewItemName('');
@@ -110,7 +107,6 @@ const BucketList = ({ list, addItemToList, updateItemInList, deleteItemFromList 
         />
         <button onClick={handleAddItem}>+ New Item</button>
       </div>
-
       { }
       {list.items.map(item => (
         <BucketListItem
@@ -128,7 +124,6 @@ const BucketListItem = ({ item, updateItem, deleteItem }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editedName, setEditedName] = useState(item.name);
   const [editedDescription, setEditedDescription] = useState(item.description);
-
   const handleUpdateItem = () => {
     updateItem({ ...item, name: editedName, description: editedDescription });
     setIsEditing(false);

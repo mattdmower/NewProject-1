@@ -42,7 +42,6 @@ app.post('/api/bucketlists/:id/items', (req, res) => {
 app.put('/api/bucketlists/:listId/items/:itemId', (req, res) => {
   const { listId, itemId } = req.params;
   const { name, description, completed } = req.body;
-
   const list = bucketLists[listId];
   if (list) {
     const itemIndex = list.items.findIndex(item => item.id === itemId);
@@ -73,5 +72,4 @@ app.delete('/api/bucketlists/:listId/items/:itemId', (req, res) => {
 });
 
 ViteExpress.config({ printViteDevServerHost: true });
-
 ViteExpress.listen(app, port, () => console.log(`Server is listening on http://localhost:${port}`));
