@@ -57,7 +57,7 @@ const App = () => {
       <h1>Bucket List Tracker</h1>
       {error && <p className="error">{error}</p>}
 
-      {}
+      { }
       <div>
         <input
           type="text"
@@ -68,7 +68,7 @@ const App = () => {
         <button onClick={createBucketList}>+ New Category</button>
       </div>
 
-      {}
+      { }
       {bucketLists.map(list => (
         <BucketList
           key={list.id}
@@ -111,7 +111,7 @@ const BucketList = ({ list, addItemToList, updateItemInList, deleteItemFromList 
         <button onClick={handleAddItem}>+ New Item</button>
       </div>
 
-      {}
+      { }
       {list.items.map(item => (
         <BucketListItem
           key={item.id}
