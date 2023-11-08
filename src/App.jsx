@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css';
 
-const apiUrl = 'http://localhost:3000/api/bucketlists'; // Endpoint to interact with the API
+const apiUrl = 'http://localhost:3000/api/bucketlists';
 
 const App = () => {
   const [bucketLists, setBucketLists] = useState([]);
   const [newListName, setNewListName] = useState('');
   const [error, setError] = useState('');
 
-  // Fetch all bucket lists
   useEffect(() => {
     axios.get(apiUrl)
       .then(response => setBucketLists(response.data))
@@ -58,7 +57,7 @@ const App = () => {
       <h1>Bucket List Tracker</h1>
       {error && <p className="error">{error}</p>}
 
-      {/* Input field to create a new bucket list */}
+      {}
       <div>
         <input
           type="text"
@@ -69,7 +68,7 @@ const App = () => {
         <button onClick={createBucketList}>+ New Category</button>
       </div>
 
-      {/* Render each bucket list */}
+      {}
       {bucketLists.map(list => (
         <BucketList
           key={list.id}
@@ -112,7 +111,7 @@ const BucketList = ({ list, addItemToList, updateItemInList, deleteItemFromList 
         <button onClick={handleAddItem}>+ New Item</button>
       </div>
 
-      {/* Render items within this list */}
+      {}
       {list.items.map(item => (
         <BucketListItem
           key={item.id}

@@ -14,7 +14,7 @@ let bucketLists = {};
 
 // Endpoint to get all bucket lists
 app.get('/api/bucketlists', (req, res) => {
-  res.json(Object.values(bucketLists)); // Sending an array of bucket lists
+  res.json(Object.values(bucketLists));
 });
 
 // Endpoint to create a new bucket list
